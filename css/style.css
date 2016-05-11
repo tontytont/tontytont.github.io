@@ -826,3 +826,35 @@ li.home-item{
   margin:0 auto;
 }
 
+
+.resume{
+  width: 1140px;
+  margin-top: 100px;
+  margin: 150px auto 0;
+}
+
+.resume h1{
+  font-size:43px;
+  text-transform:uppercase;
+  color:#000000;
+  padding:20px;
+  font-weight:900;
+  line-height:70px;
+}
+.resume h2{
+  font-size:20px;
+
+  text-transform:uppercase;
+  color:#000000;
+  font-weight:90;
+  line-height:70px;
+  padding-left: 10px;
+}
+.resume p{
+  font-size:13px;
+  color:#404040;
+  margin-top:30px;
+  font-weight:400;
+  line-height:22px;
+  letter-spacing:1px;
+}
