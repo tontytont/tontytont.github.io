@@ -2,6 +2,14 @@
 // Ported from flash demo - http://wonderfl.net/c/9os2
 //
 
+var colors = ['#000','#fff'];
+var tmp = parseInt(Math.floor((Math.random()*2)));
+var color = colors[tmp];
+if(color==='#fff'){
+    $(".lineart").css('background-color','#000');
+	console.log(color);
+}
+
 function DrawWorm(){
   
   var canvas;
@@ -91,8 +99,8 @@ function DrawWorm(){
 		var pp2x = (obj.c2x + cc2x) / 2;
 		var pp2y = (obj.c2y + cc2y) / 2;
 		
-		context.fillStyle = '#fff';
-		context.strokeStyle = '#fff';
+		context.fillStyle = color;
+		context.strokeStyle = color;
 		context.beginPath();
 
 		context.moveTo(obj.p1x , obj.p1y);
@@ -140,7 +148,7 @@ function DrawWorm(){
 		createWorm(matrix, len);
 		
 		context.beginPath(); 
-		context.strokeStyle = '#fff';
+		context.strokeStyle = color;
    		context.moveTo(px, py);
    		context.lineTo(x0, y0);
    		context.stroke();
@@ -228,6 +236,15 @@ function DrawWorm(){
 	var MouseDown = function(e) {
 		e.preventDefault();
 		canvas.width = canvas.width;
+		if(color==='#fff'){
+    		$(".lineart").css('background-color','#fff');
+    		color='#000';
+		}
+		else if(color==='#000'){
+    		$(".lineart").css('background-color','#000');
+    		color='#fff';
+		}
+
 		vms = [];
 	}
 	
