@@ -722,6 +722,7 @@ textarea:focus{background:#f4f4f4; height:250px;}
 }
 .home {
   width:480px;
+  height:auto;
   max-width:100%;
   display:block;
   margin:auto;
@@ -864,6 +865,7 @@ li.home-item{
   line-height:22px;
   letter-spacing:1px;
 }.resume a{
+  padding-top:10px;
   color:#000000;
   letter-spacing:1px;
 }
