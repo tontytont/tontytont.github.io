@@ -828,7 +828,7 @@ li.home-item{
 
 
 .resume{
-  width:80%;
+  max-width:1170px;
   padding-top:15vh;
   margin:auto;
 }
@@ -849,7 +849,6 @@ li.home-item{
   line-height:70px;
 }
 .resume  h3{
-  display:block;
   font-size:16px;
   color:#000000;
   font-weight:600;
@@ -865,9 +864,4 @@ li.home-item{
 }.resume a{
   color:#000000;
   letter-spacing:1px;
-}
-
-.container-cv{
-  width:90%;
-  margin:auto;
 }
