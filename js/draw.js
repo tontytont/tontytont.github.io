@@ -7,7 +7,6 @@ var tmp = parseInt(Math.floor((Math.random()*2)));
 var color = colors[tmp];
 if(color==='#fff'){
     $(".lineart").css('background-color','#000');
-	console.log(color);
 }
 
 function DrawWorm(){
