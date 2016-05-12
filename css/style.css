@@ -719,6 +719,7 @@ textarea:focus{background:#f4f4f4; height:250px;}
   height:100%;
   position: relative;
   background-color: #fff;
+  display:block;
 }
 .home {
   width:480px;
