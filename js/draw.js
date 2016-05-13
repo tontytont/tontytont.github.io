@@ -40,7 +40,7 @@ function DrawWorm(){
 		canvas.width = width;
 		canvas.height = height*4.5;
 		
-		canvas.addEventListener('touchmove', TouchMove, true);
+		canvas.addEventListener('touchmove', TouchMove, false);
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('click', MouseDown, false);
 		
