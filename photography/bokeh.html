@@ -37,25 +37,8 @@
 
 
   <!--Header-->
-<header class="box">
+<div id='header'></div>
 
-  <div class="header-margin">
-    
-    <a class='back-icon'href='../photography.html'>
-      <i class="fa fa-chevron-circle-left fa-3x" style='padding-top:18px;padding-left: 15px'aria-hidden="true"></i>
-    </a>
-    <ul class="social-icon">
-      <div class="social-index"style='padding-right:15px' >
-        <li><a href="https://www.facebook.com/tontytont"target="_blank"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://500px.com/tontytont"target="_blank"><i aria-hidden="true"class="fa fa-500px"></i></a></li>
-        <li><a href="https://github.com/STBTony/"target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a href="https://ca.linkedin.com/in/stonyw"target="_blank"><i class="fa fa-linkedin"></i></a></li>
-      </div>
-    </ul>
-    
-  </div>
-
-</header>
   <div class="clear"></div>
 
   <!--Content-->
@@ -110,26 +93,7 @@
 
 
   <!--Footer-->
-
-  <footer>
-
-    <div class="footer-margin">
-      <div class="social-footer">
-        <a href="https://www.facebook.com/tontytont"target="_blank"><i class="fa fa-facebook"></i></a>
-        <a href="https://500px.com/tontytont"target="_blank"><i class="fa fa-500px"></i></a>
-        <a href="https://github.com/STBTony/"target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://ca.linkedin.com/in/stonyw"target="_blank"><i class="fa fa-linkedin"></i></a>
-      
-      </div>  
-      <div class="copyright">TENGYUE WANG</div>
-      
-
-    
-    </div>
-
-
-
-  </footer>
+<div id='footer'></div>
 
 
 
@@ -154,7 +118,12 @@
     });
   </script>
 
-
+  <script>
+    $(function(){
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html"); 
+    });
+  </script>
 
 </body>
 </html>
