@@ -204,7 +204,7 @@ ul.social-icon{
 
 ul.social-icon a{
   float:right;
-  font-size:15px;
+  font-size:20px;
   border-bottom:0;
   color:#7d7d7d;
   padding-right:0px !important;
@@ -606,7 +606,7 @@ footer{
 }
 
 .footer-margin .social-footer a{
-  font-size:18px;
+  font-size:20px;
   color:black;
   padding: 20px;
 }
@@ -807,10 +807,10 @@ li.home-item{
   position:fixed;
   width:100%;
   margin:0 auto;
-  height:40px;
-  z-index:9999;
+  height:80px;
+  z-index:9998;
   display:none;
-  background:none;
+  background-color:#fff;
   top:0;
   -webkit-transition: background 0.2s ease-in;
   -moz-transition: background 0.2s ease-in;
@@ -828,6 +828,33 @@ li.home-item{
   width:90%;
   margin:0 auto;
 }
+
+.hbox{
+  position:fixed;
+  width:100%;
+  margin:0 auto;
+  height:40px;
+  z-index:9999;
+  display:none;
+  background:none;
+  top:0;
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in; 
+}
+
+.hbox .header-margin{
+  width:90%;
+  margin:0 auto;
+}
+
+.hbox .header-margin-mini{
+  width:90%;
+  margin:0 auto;
+}
+
 
 
 .resume{
@@ -870,4 +897,8 @@ li.home-item{
   padding-top:10px;
   color:#000000;
   letter-spacing:1px;
+}
+
+.container{
+  padding-top:80px;
 }
