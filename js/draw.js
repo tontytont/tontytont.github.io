@@ -5,8 +5,12 @@
 var colors = ['#000','#fff'];
 var tmp = parseInt(Math.floor((Math.random()*2)));
 var color = colors[tmp];
+$(".intro").css('background-color','#000');
+$(".intro h1").css('color','#fff');
 if(color==='#fff'){
-    $(".lineart").css('background-color','#000');
+    $(".lineart").css('background-color','#000'); 
+    $(".intro").css('background-color','#fff');
+    $(".intro h1").css('color','#000');
 }
 
 function DrawWorm(){
@@ -237,10 +241,14 @@ function DrawWorm(){
 		canvas.width = canvas.width;
 		if(color==='#fff'){
     		$(".lineart").css('background-color','#fff');
+		    $(".intro").css('background-color','#000');
+		    $(".intro h1").css('color','#fff');
     		color='#000';
 		}
 		else if(color==='#000'){
     		$(".lineart").css('background-color','#000');
+		    $(".intro").css('background-color','#fff');
+		    $(".intro h1").css('color','#000');
     		color='#fff';
 		}
 

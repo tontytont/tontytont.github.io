@@ -708,7 +708,7 @@ textarea:focus{background:#f4f4f4; height:250px;}
 #overlay { 
   position:absolute;
   z-index:90;
-  top: 110vh;
+  top: 90vh;
   width: 100%;
 }
 
@@ -901,4 +901,13 @@ li.home-item{
 
 .container{
   padding-top:80px;
+}
+.intro{
+  padding-top:40vh;
+  height:80px;
+}
+.intro h1{
+  text-align: center;
+  font-size: 117px;
+  font-weight: 800;
 }
