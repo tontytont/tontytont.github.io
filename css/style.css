@@ -708,7 +708,7 @@ textarea:focus{background:#f4f4f4; height:250px;}
 #overlay { 
   position:absolute;
   z-index:90;
-  top: 90vh;
+  top: 100vh;
   width: 100%;
 }
 

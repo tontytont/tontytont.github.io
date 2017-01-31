@@ -55,7 +55,7 @@ function DrawWorm(){
 		height = window.innerHeight;
 		
 		canvas.width = width;
-		canvas.height = height*4;
+		canvas.height = height*5;
 		
 		canvas.addEventListener('touchmove', TouchMove, false);
 		canvas.addEventListener('mousemove', MouseMove, false);
