@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style-responsive.css">
+  <link rel="stylesheet" href="lib/plyr.css">
     
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   
@@ -55,9 +56,17 @@
 
 </header>
   <div class="clear"></div>
+  <div id="video-wrapper">
+    <h1>Summer Internship @ Autodesk</h1>
+    <div data-type="youtube" data-video-id="JuWBMGlkbmU"></div>
+  </div>
+  <div id="video-wrapper">
+    <h1>ProtoHack @ Bitmaker</h1>
+    <div data-type="youtube" data-video-id="fhW80NgrRjg"></div>
+  </div>
 
 
-
+  <h1 style="text-align: center; margin-top: 60px">AND MORE COMING</h1>
   <!--Footer-->
 
   <footer>
@@ -94,7 +103,8 @@
   <script src="js/jquery.jkit.1.2.16.min.js"></script>
  
   <script src="js/script.js" type="text/javascript"></script>
-  
+  <script src="lib/plyr.js"></script>
+  <script>plyr.setup();</script>
   <script>
     $('#button, #buttons').on('click', function() {
       $( ".opacity-nav" ).fadeToggle( "slow", "linear" );

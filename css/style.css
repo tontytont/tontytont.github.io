@@ -909,7 +909,7 @@ li.home-item{
   padding-top:80px;
 }
 .intro{
-  z-index: 11;
+  z-index: 9;
   height:10vh;
   background: transparent;
   position: fixed;
@@ -962,4 +962,36 @@ li.home-item{
 .clear .images {
   float: right;
   
+}
+
+#video-wrapper {
+  text-align: center;
+  max-width: 100%;
+  margin: auto;
+  margin-top: 100px;
+  width: 50%;
+}
+
+#video-wrapper h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: 200;
+  color: #000;
+}
+
+#video-wrapper button {
+  color: #fff;
+  background: #000;
+}
+
+#video-wrapper button:hover {
+  background: #606060;
+}
+
+#video-wrapper .plyr__volume--display {
+  color: #dbdbdb;
+}
+
+#video-wrapper .plyr__progress--played {
+  color: #dbdbdb;
 }

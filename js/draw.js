@@ -7,7 +7,7 @@ var color = colors[tmp];
 var characterList = ['0', '1', '壹', '零', '1', '0', '0', '1'];
 var textColors = [color, color, color, color, color];
 var layers = {
-    n: 5, //number of layers
+    n: 8, //number of layers
     letters: [32, 16, 8, 4, 2], //letters per layer (starting from the deepest layer)
     coef: [0.1, 0.2, 0.3, 0.4, 0.5], //how much the letters move from the mouse (starting from the deepest layer)
     size: [8, 12, 16, 20, 24], //font size of the letters (starting from the deepest layer)
@@ -606,19 +606,6 @@ window.Matrix2D = Matrix2D;
 
 var app, interval, count;
 
-function demoApp() {
-  count++;
-  if (count % 2 == 0){
-	  app.mouse.y -= 40    
-      } else {
-       app.mouse.y += 40; 
-      }
-
-  if (count > 30) {
-   window.clearInterval( interval );
-  }
-}
-
 setTimeout( function() {
   app = new DrawWorm();
   app.initialize();
@@ -698,8 +685,8 @@ function createLetters() {
         for (var j = 0; j < layers.letters[i]; j++) {
 
             var character = rnd.choose(characterList);
-            var x = rnd.btwn(0, canvas.width);
-            var y = rnd.btwn(0, canvas.height);
+            var x = rnd.btwn(-100, canvas.width + 100);
+            var y = rnd.btwn(-100, canvas.height + 100);
 
             characters.push({
                 char: character,
