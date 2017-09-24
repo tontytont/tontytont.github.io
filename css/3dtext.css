@@ -22,6 +22,7 @@ body {
 }
 
 .cl-effect-1 a::before,
+
 .cl-effect-1 a::after {
     display: inline-block;
     opacity: 0;

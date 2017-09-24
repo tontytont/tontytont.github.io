@@ -1,5 +1,5 @@
 // Draw Worm
-// Ported from flash demo - http://wonderfl.net/c/9os2
+// Ported from flash demo - https://wonderfl.net/c/9os2
 //
 
 var colors = ['#000','#fff'];
