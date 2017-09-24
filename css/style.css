@@ -33,7 +33,7 @@ a{
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in; 
-  border-bottom:1px solid #dedede;
+  /*border-bottom: 1px solid;*/
 }
 
 a:focus {
@@ -713,14 +713,20 @@ textarea:focus{background:#f4f4f4; height:250px;}
 }
 
 .lineart { 
-  z-index: 0;
+  z-index: 10;
+  top: 50%;
   margin:0px;
   overflow: hidden;
   width:100%;
   height:100%;
-  position: relative;
-  background-color: #fff;
+  position: fixed;
+  background:transparent;
   display:block;
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in; 
 }
 .home {
   width:480px;
@@ -903,11 +909,56 @@ li.home-item{
   padding-top:80px;
 }
 .intro{
-  padding-top:40vh;
-  height:80px;
+  z-index: 11;
+  height:10vh;
+  background: transparent;
+  position: fixed;
+  top: 40vh;
+  width: 100%;
+  /*transition: background-color 0.2s/ ease;*/
+  /*transition: color 0.3s ease;*/
 }
 .intro h1{
   text-align: center;
-  font-size: 117px;
-  font-weight: 800;
+  font-size: 12vh;
+  font-weight: 100;
+  background: transparent;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.routes {
+  position: fixed;
+  top: 75%;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.routes a {
+  padding: 10px;
+  text-align: center;
+  width: 25vw;
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+.routes a:hover {
+}
+/*.index-container {
+  overflow-y: hidden;
+}*/
+
+.clear .images {
+  float: right;
 }

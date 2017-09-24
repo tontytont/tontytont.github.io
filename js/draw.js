@@ -1,31 +1,74 @@
-// Draw Worm
-// Ported from flash demo - http://wonderfl.net/c/9os2
-//
-
 var colors = ['#000','#fff'];
 var tmp = parseInt(Math.floor((Math.random()*2)));
 var color = colors[tmp];
-$(".intro").css('background-color','#000');
-$(".intro h1").css('color','#fff');
+
+
+
+var characterList = ['0', '1', '壹', '零', '1', '0', '0', '1'];
+var textColors = [color, color, color, color, color];
+var layers = {
+    n: 5, //number of layers
+    letters: [32, 16, 8, 4, 2], //letters per layer (starting from the deepest layer)
+    coef: [0.1, 0.2, 0.3, 0.4, 0.5], //how much the letters move from the mouse (starting from the deepest layer)
+    size: [8, 12, 16, 20, 24], //font size of the letters (starting from the deepest layer)
+    color: textColors, //color of the letters (starting from the deepest layer)
+    font: 'Courier' //font family (of every layer)
+};
+
 if(color==='#fff'){
-    $(".lineart").css('background-color','#000'); 
-    $(".intro").css('background-color','#fff');
-    $(".intro h1").css('color','#000');
+    $("#text-canvas").css('background-color','#000');
+    $(".intro h1").css('color', color);
+    $(".routes a").css('color',color);
+} else {
+	$("#text-canvas").css('background-color','#fff');
+	$(".intro h1").css('color',color);
+    $(".routes a").css('color',color);
 }
+
 $( ".intro" ).on( "click", function() {
 	if(color==='#fff'){
-    		$(".lineart").css('background-color','#fff');
-		    $(".intro").css('background-color','#000');
-		    $(".intro h1").css('color','#fff');
+		    $("#text-canvas").css('background-color','#fff');
+		    $(".intro h1").css('color','#000');
     		color='#000';
+    		$(".routes a").css('color',color);
+    		layers.color = [color, color, color, color, color];
+    		createLetters();
+    		update();
 		}
 		else if(color==='#000'){
-    		$(".lineart").css('background-color','#000');
-		    $(".intro").css('background-color','#fff');
-		    $(".intro h1").css('color','#000');
+
+		    $("#text-canvas").css('background-color','#000');
+		    $(".intro h1").css('color','#fff');
     		color='#fff';
+			$(".routes a").css('color',color);
+    		layers.color = [color, color, color, color, color];
+    		createLetters();
+    		update();
 		}
 });
+
+$( "#text-canvas" ).on( "click", function() {
+	if(color==='#fff'){
+		    $("#text-canvas").css('background-color','#fff');
+		    $(".intro h1").css('color','#000');
+    		color='#000';
+    		$(".routes a").css('color',color);
+    		layers.color = [color, color, color, color, color];
+			createLetters();
+			update();
+		}
+		else if(color==='#000'){
+		    $("#text-canvas").css('background-color','#000');
+		    $(".intro h1").css('color','#fff');
+    		color='#fff';
+	    	$(".routes a").css('color',color);
+    		layers.color = [color, color, color, color, color];
+			createLetters();
+			update();
+		}
+});
+
+
 function DrawWorm(){
   
   var canvas;
@@ -41,8 +84,8 @@ function DrawWorm(){
 	
 	var vms = [];
 	
-	var MAX_NUM = 100;
-	var N = 100;
+	var MAX_NUM = 50;
+	var N = 50;
 	
 	var px = window.innerWidth/2;
 	var py = 0;
@@ -54,15 +97,17 @@ function DrawWorm(){
 		width = window.innerWidth;
 		height = window.innerHeight;
 		
-		canvas.width = width;
-		canvas.height = height*5;
+		canvas.width = width*2;
+		canvas.height = height*2;
+		canvas.style.width = width;
+		canvas.style.height = height;
 		
 		canvas.addEventListener('touchmove', TouchMove, false);
-		canvas.addEventListener('mousemove', MouseMove, false);
+		document.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('click', MouseDown, false);
 		
 		//Set interval - Bad! - I know!
-		var interval = setInterval(Draw, 10);
+		var interval = setInterval(Draw, 20);
 		
 	}
 	
@@ -79,8 +124,7 @@ function DrawWorm(){
 			
 			if (o.count < N){
 				DrawWorm(o);
-				o.count++;				
-			//This looks a tad hacky - modifying the loop from within :S
+				o.count++;
 			} else {
 				len--;
 				vms.splice(i, 1);
@@ -253,24 +297,30 @@ function DrawWorm(){
 		e.preventDefault();
 		canvas.width = canvas.width;
 		if(color==='#fff'){
-    		$(".lineart").css('background-color','#fff');
-		    $(".intro").css('background-color','#000');
-		    $(".intro h1").css('color','#fff');
+		    $("#text-canvas").css('background-color','#fff');
+		    $(".intro h1").css('color','#000');
     		color='#000';
+    		$(".routes a").css('color',color);
+    		layers.color = [color, color, color, color, color];
+			createLetters();
+			update();
 		}
 		else if(color==='#000'){
-    		$(".lineart").css('background-color','#000');
-		    $(".intro").css('background-color','#fff');
-		    $(".intro h1").css('color','#000');
+		    $("#text-canvas").css('background-color','#000');
+		    $(".intro h1").css('color','#fff');
     		color='#fff';
+    		$(".routes a").css('color',color);
+    		layers.color = [color, color, color, color, color];
+			createLetters();
+			update();
 		}
 
 		vms = [];
 	}
 	
 	var MouseMove = function(e) {
-        //mouse.x = e.layerX - canvas.offsetLeft;
-        mouse.y = e.layerY - canvas.offsetTop;
+        mouse.x = (e.layerX - canvas.offsetLeft) * 2;
+        // mouse.y = e.layerY - canvas.offsetTop;
 	}
 	
 	var TouchMove = function(e) {
@@ -574,3 +624,108 @@ setTimeout( function() {
   app.initialize();
   count = 0;
 }, 10);
+
+
+
+canvas = document.getElementsByTagName('canvas')[0];
+canvas.width = document.body.clientWidth;
+canvas.height = document.body.clientHeight;
+var ctx = canvas.getContext('2d');
+
+var characters = [];
+var mouseX = document.body.clientWidth/2;
+var mouseY = document.body.clientHeight/2;
+
+var rnd = {
+    btwn: function(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    },
+    choose: function(list) {
+        return list[rnd.btwn(0, list.length)];
+    }
+};
+
+
+
+/*LETTER DRAWING*/
+
+function drawLetter(char) {
+    ctx.font = char.size + 'px ' + char.font;
+    ctx.fillStyle = char.color;
+    
+    var x = char.posX + (mouseX-canvas.width/2)*char.coef;
+    var y = char.posY + (mouseY-canvas.height/2)*char.coef;
+
+    ctx.fillText(char.char, x, y);
+}
+
+
+
+/*ANIMATION*/
+
+document.onmousemove = function(ev) {
+    mouseX = ev.pageX - canvas.offsetLeft;
+    mouseY = ev.pageY - canvas.offsetTop;
+
+    if (window.requestAnimationFrame) {
+        requestAnimationFrame(update);
+    } else {
+        update();
+    }
+};
+
+function update() {
+    clear();
+    render();
+}
+
+function clear() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function render() {
+    for (var i = 0; i < characters.length; i++) {
+        drawLetter(characters[i]);
+    }
+}
+
+
+
+/*INITIALIZE*/
+
+function createLetters() {
+    for (var i = 0; i < layers.n; i++) {
+        for (var j = 0; j < layers.letters[i]; j++) {
+
+            var character = rnd.choose(characterList);
+            var x = rnd.btwn(0, canvas.width);
+            var y = rnd.btwn(0, canvas.height);
+
+            characters.push({
+                char: character,
+                font: layers.font,
+                size: layers.size[i],
+                color: layers.color[i],
+                layer: i,
+                coef: layers.coef[i],
+                posX: x,
+                posY: y
+            });
+
+        }
+    }
+}
+
+createLetters();
+update();
+
+
+
+/*REAJUST CANVAS AFTER RESIZE*/
+
+window.onresize = function() {
+    location.reload();
+};
+
+
+
