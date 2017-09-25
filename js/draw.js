@@ -77,7 +77,7 @@ function DrawWorm(){
   var width;
   var height;
 	
-	var mouse = {x: window.innerWidth/2, y:  0};
+	var mouse = {x: window.innerWidth, y:  0};
   this.mouse = mouse;
 		
 	var interval;
@@ -87,7 +87,7 @@ function DrawWorm(){
 	var MAX_NUM = 50;
 	var N = 50;
 	
-	var px = window.innerWidth/2;
+	var px = window.innerWidth;
 	var py = 0;
 		
 	this.initialize = function(){
