@@ -269,12 +269,13 @@ function updateBatteryStatus(battery) {
 $.get("https://ipinfo.io", function(response) {
     connectionInfo = response;
 }, "jsonp");
+if (navigator.getBattery) {
+  navigator.getBattery().then(function(battery) {
+    // Update the battery status initially when the promise resolves ...
+    updateBatteryStatus(battery);
 
-navigator.getBattery().then(function(battery) {
-  // Update the battery status initially when the promise resolves ...
-  updateBatteryStatus(battery);
-
-});
+  });
+}
 
 setTimeout(function(){ 
 
