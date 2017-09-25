@@ -243,3 +243,17 @@ function hidePreloader() {
 
 
 })//End
+
+
+var colors = ['#000','#fff'];
+var tmp = parseInt(Math.floor((Math.random()*2)));
+var color = colors[tmp];
+if(color==='#fff'){
+  $(".intro h1").css('color', color);
+  $(".routes a").css('color',color);
+  $("body").css('background-color','#000');
+  $("header").css('background-color','#000');
+} else {
+  $(".intro h1").css('color',color);
+  $(".routes a").css('color',color);
+}
