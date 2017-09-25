@@ -18,7 +18,8 @@ var layers = {
 if(color==='#fff'){
     $("#text-canvas").css('background-color','#000');
     $(".intro h1").css('color', color);
-    $(".routes a").css('color',color);
+    $(".routes a").css('color',color);;
+    $(".blink-text").css('color',color);
 } else {
 	$("#text-canvas").css('background-color','#fff');
 	$(".intro h1").css('color',color);
@@ -31,6 +32,7 @@ $( ".intro" ).on( "click", function() {
 		    $(".intro h1").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
+            $(".blink-text").css('color',color);
     		layers.color = [color, color, color, color, color];
     		createLetters();
     		update();
@@ -41,6 +43,7 @@ $( ".intro" ).on( "click", function() {
 		    $(".intro h1").css('color','#fff');
     		color='#fff';
 			$(".routes a").css('color',color);
+            $(".blink-text").css('color',color);
     		layers.color = [color, color, color, color, color];
     		createLetters();
     		update();
@@ -53,6 +56,7 @@ $( "#text-canvas" ).on( "click", function() {
 		    $(".intro h1").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
+            $(".blink-text").css('color',color);
     		layers.color = [color, color, color, color, color];
 			createLetters();
 			update();
@@ -62,6 +66,7 @@ $( "#text-canvas" ).on( "click", function() {
 		    $(".intro h1").css('color','#fff');
     		color='#fff';
 	    	$(".routes a").css('color',color);
+            $(".blink-text").css('color',color);
     		layers.color = [color, color, color, color, color];
 			createLetters();
 			update();
@@ -301,6 +306,7 @@ function DrawWorm(){
 		    $(".intro h1").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
+            $(".blink-text").css('color',color);
     		layers.color = [color, color, color, color, color];
 			createLetters();
 			update();
@@ -310,6 +316,7 @@ function DrawWorm(){
 		    $(".intro h1").css('color','#fff');
     		color='#fff';
     		$(".routes a").css('color',color);
+            $(".blink-text").css('color',color);
     		layers.color = [color, color, color, color, color];
 			createLetters();
 			update();

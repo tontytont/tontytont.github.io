@@ -918,11 +918,37 @@ li.home-item{
   /*transition: background-color 0.2s/ ease;*/
   /*transition: color 0.3s ease;*/
 }
-.intro h1{
+.intro h1 {
   text-align: center;
   font-size: 12vh;
   font-weight: 100;
   background: transparent;
+}
+
+.blink-text {
+  animation: blinker 3s ease-in-out infinite;
+  position: fixed;
+  top: 47%;
+  z-index: 10;
+  left: 0;
+  right: 0;
+}
+
+.blink-text p {
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.blink-text #left {
+  display: inline;
+}
+.blink-text #right {
+  display: inline;
+  float: right;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0.2; }
 }
 
 .unselectable {
