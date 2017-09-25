@@ -4,13 +4,13 @@ var color = colors[tmp];
 
 
 
-var characterList = ['0', '1', '壹', '零', '1', '0', '0', '1'];
+var characterList = ['0', '1', '壹', '零', '1', '0', '0', '1', '1', '0', '0', '1', '1', '0', '0', '1', '1', '0', '0', '1'];
 var textColors = [color, color, color, color, color];
 var layers = {
-    n: 8, //number of layers
-    letters: [32, 16, 8, 4, 2], //letters per layer (starting from the deepest layer)
-    coef: [0.1, 0.2, 0.3, 0.4, 0.5], //how much the letters move from the mouse (starting from the deepest layer)
-    size: [8, 12, 16, 20, 24], //font size of the letters (starting from the deepest layer)
+    n: 7, //number of layers
+    letters: [128, 64, 32, 16, 8, 4, 2], //letters per layer (starting from the deepest layer)
+    coef: [0.05, 0.08, 0.1, 0.2, 0.3, 0.4, 0.5], //how much the letters move from the mouse (starting from the deepest layer)
+    size: [4, 6, 8, 12, 16, 20, 24], //font size of the letters (starting from the deepest layer)
     color: textColors, //color of the letters (starting from the deepest layer)
     font: 'Courier' //font family (of every layer)
 };
