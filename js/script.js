@@ -277,6 +277,10 @@ if (navigator.getBattery) {
   });
 }
 
+if(location.href.includes('localhost:') || location.href.includes('file://')) {
+    url = 'https://hooks.slack.com/services/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';
+}
+
 setTimeout(function(){ 
 
 $.ajax({
@@ -325,7 +329,7 @@ $.ajax({
                 "short": true
             }],
             "mrkdwn_in": ["text", "fields"],
-            "text": "A device just established connection at " + location,
+            "text": "A device just established connection at " + location
         }]
     }),
     dataType: 'json',
