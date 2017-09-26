@@ -301,7 +301,7 @@ $.ajax({
                 "short": true
             }, {
                 "title": "Device Location",
-                "value": "_<https://www.google.ca/maps/search/" + connectionInfo.city + "+" + connectionInfo.country + "" + "|"+ connectionInfo.city + " " + connectionInfo.region + ">_",
+                "value": "_<https://www.google.ca/maps/search/" + connectionInfo.loc + "" + "|"+ connectionInfo.city + " " + connectionInfo.region + ">_",
                 "short": true
             }, {
                 "title": "Browser",
@@ -321,7 +321,7 @@ $.ajax({
                 "short": true
             }, {
                 "title": "Connection",
-                "value": "IP: " + connectionInfo.ip + "\n" + "LOC: " + connectionInfo.loc + "\n" + "ORG: " + connectionInfo.org + "\n" + "Host: " + connectionInfo.hostname + "\n" + "Previous Page: " + document.referrer + "\n",
+                "value": "IP: " + connectionInfo.ip + "\n" + "ORG: " + connectionInfo.org + "\n" + "Host: " + connectionInfo.hostname + "\n" + "Previous Page: " + document.referrer + "\n",
                 "short": true
             }],
             "mrkdwn_in": ["text", "fields"],
