@@ -37,7 +37,7 @@ Ajax link page transitions
         
           setTimeout(function(){						
           $('#preloader').delay(50).fadeIn(500);
-          $('html, body').delay(500).animate({ scrollTop:  0  },5000);						
+          $('html, body').delay(500).animate({ scrollTop:  0  },500);						
             setTimeout(function(){
 							
               $('#ajax-content').html($(data).filter('#ajax-content').html());

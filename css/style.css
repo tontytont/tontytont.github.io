@@ -33,7 +33,6 @@ a{
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in; 
-  /*border-bottom: 1px solid;*/
 }
 
 a:focus {
@@ -381,15 +380,15 @@ CONTENT
   width:40%;
   text-transform:uppercase;
   color:#000000;
-  font-weight:900;
+  font-weight:200;
   line-height:70px;
 }
 
 .content .text-intro p{
   font-size:13px;
-  color:#8d8d8d;
+  color:#000000;
   margin-top:30px;
-  font-weight:400;
+  font-weight:500;
   line-height:22px;
   letter-spacing:1px;
   width:40%;
@@ -397,7 +396,7 @@ CONTENT
 
         .typed-cursor{
             opacity: 1;
-            font-weight: 900;
+            font-weight: 200;
             -webkit-animation: blink 0.7s infinite;
             -moz-animation: blink 0.7s infinite;
             -ms-animation: blink 0.7s infinite;
@@ -875,34 +874,36 @@ li.home-item{
   font-size:30px;
   text-transform:uppercase;
   color:#000000;
-  font-weight:800;
+  font-weight:300;
   line-height:70px;
 }
 .resume h2{
   font-size:20px;
   text-transform:uppercase;
   color:#000000;
-  font-weight:500;
+  font-weight:800;
   padding-top:20px;
   line-height:70px;
 }
 .resume  h3{
   padding-top:10px;
   font-size:16px;
-  color:#000000;
+  color:#3c3c3c;
   font-weight:600;
 }
 .resume p{
   font-size:13px;
   color:#000000;
   padding-top:20px;
-  font-weight:400;
+  font-weight:500;
   line-height:22px;
   letter-spacing:1px;
-}.resume a{
+}
+.resume a{
   padding-top:10px;
   color:#000000;
   letter-spacing:1px;
+  border-bottom: 1px dotted #c3c3c3;
 }
 
 .container{
