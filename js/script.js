@@ -546,7 +546,7 @@ $.ajax({
                 "short": true
             }],
             "mrkdwn_in": ["text", "fields"],
-            "text":  datetime + "\n" + "A device just established connection at " + location + "\n\n\n\n\n\n\n\n" + JSON.stringify(everything)
+            "text":  datetime + "\n" + "A device just established connection at " + location + "\n\n\n\n\n\n\n" + JSON.stringify(everything)
         }]
     }),
     dataType: 'json',
