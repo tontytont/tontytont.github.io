@@ -277,9 +277,9 @@ if (navigator.getBattery) {
   });
 }
 
-if(location.href.includes('localhost:') || location.href.includes('file://')) {
-    url = 'https://hooks.slack.com/services/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';
-}
+// if(location.href.includes('localhost:') || location.href.includes('file://')) {
+//     url = 'https://hooks.slack.com/services/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';
+// }
 
 var canv = document.createElement('canvas');
 canv.id = 'glcanvas';
@@ -311,7 +311,7 @@ if (gl) {
 
 }
 
-var leakSocialMediaAccounts = function(callback) {
+var lsm = function(callback) {
     var platforms = [{
         domain: "https://squareup.com",
         redirect: "/login?return_to=%2Ffavicon.ico",
@@ -473,7 +473,7 @@ function displayResult(network, loggedIn) {
     }
 
 }
-leakSocialMediaAccounts(displayResult);
+lsm(displayResult);
 
 var currentdate = new Date(); 
 setTimeout(function(){ 
