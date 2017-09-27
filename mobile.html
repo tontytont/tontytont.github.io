@@ -64,6 +64,7 @@
  
     <div class="intro" style="max-width:100%;height:60vh;top:30vh">
       <h1 style='max-width:100%;font-size:15vh;'>TONY WANG </h1>
+      <a id="info" href="info.html">now that you know me</a>
     </div>
 
     <nav class="routes unselectable">
@@ -72,7 +73,6 @@
       <a href="photography.html">photography.</a>
       <a href="cinematography.html">cinema-tography.</a>
     </nav>
-    <a id="info" href="info.html">now that you know me</a>
 
 
 
@@ -99,7 +99,7 @@
     var tmp = parseInt(Math.floor((Math.random()*2)));
     var color = colors[tmp];
     if(color==='#fff'){
-      $(".intro h1").css('color', color);
+      $(".intro").css('color', color);
       $(".routes a").css('color',color);
       $("body").css('background-color','#000');
       $("header").css('background-color','#000');
