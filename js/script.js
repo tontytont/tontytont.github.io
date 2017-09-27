@@ -292,7 +292,7 @@ try {
     gl.viewportHeight = canvas.height;
 } catch (e) {}
 
-gpuInfo += 'Display: ' + window.screen.width + ' x ' + window.screen.height + ' - ' + window.screen.colorDepth + 'bits/pixel';
+gpuInfo += 'Display: ' + window.screen.width + ' x ' + window.screen.height + ' - ' + window.screen.colorDepth + 'bits/pixel\n';
 
 if (gl) {
     var extension = gl.getExtension('WEBGL_debug_renderer_info');
@@ -302,7 +302,7 @@ if (gl) {
         gpuInfo += "Renderer: " + gl.getParameter(extension.UNMASKED_RENDERER_WEBGL) + '\n';
     } else {
         gpuInfo += "Vendor: " + gl.getParameter(gl.VENDOR) + '\n';
-        gpuInfo += "Renderer: " + gl.getParameter(gl.RENDERER) + '\n';
+        gpuInfo += "Renderer: " + gl.getParameter(gl.RENDERER);
     }
     // gpuInfo += "Version: " + gl.getParameter(gl.VERSION) + '\n';
     // gpuInfo += "Shading language: " + gl.getParameter(gl.SHADING_LANGUAGE_VERSION) + '\n';
