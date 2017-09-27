@@ -910,12 +910,13 @@ li.home-item{
   padding-top:80px;
 }
 .intro{
-  z-index: 9;
+  z-index: 11;
   height:10vh;
   background: transparent;
   position: fixed;
   top: 40vh;
   width: 100%;
+  text-align: center;
   /*transition: background-color 0.2s/ ease;*/
   /*transition: color 0.3s ease;*/
 }
@@ -962,6 +963,17 @@ li.home-item{
     cursor: default;
 }
 
+#info {
+  color: inherit;
+  position: fixed; 
+  bottom: 2%;
+  right: 2%;
+  display: block;
+}
+
+#info:hover {
+  border-bottom: 0.5px solid;
+}
 .routes {
   position: fixed;
   top: 75%;
@@ -1020,3 +1032,25 @@ li.home-item{
 #video-wrapper .plyr__progress--played {
   color: #dbdbdb;
 }
+
+.device-info {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.device-info h1 {
+  font-weight: 100;
+  font-size: 60px;
+  margin: 15px
+}
+
+.device-info h2 {
+  font-weight: 200;
+  color: #606060;
+  font-size: 25px;
+  margin: 10px;
+  margin-top: 30px;
+}
+

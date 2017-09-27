@@ -17,19 +17,19 @@ var layers = {
 
 if(color==='#fff'){
     $("#text-canvas").css('background-color','#000');
-    $(".intro h1").css('color', color);
+    $(".intro").css('color', color);
     $(".routes a").css('color',color);;
     $(".blink-text").css('color',color);
 } else {
 	$("#text-canvas").css('background-color','#fff');
-	$(".intro h1").css('color',color);
+	$(".intro").css('color',color);
     $(".routes a").css('color',color);
 }
 
 $( ".intro" ).on( "click", function() {
 	if(color==='#fff'){
 		    $("#text-canvas").css('background-color','#fff');
-		    $(".intro h1").css('color','#000');
+		    $(".intro").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
             $(".blink-text").css('color',color);
@@ -40,7 +40,7 @@ $( ".intro" ).on( "click", function() {
 		else if(color==='#000'){
 
 		    $("#text-canvas").css('background-color','#000');
-		    $(".intro h1").css('color','#fff');
+		    $(".intro").css('color','#fff');
     		color='#fff';
 			$(".routes a").css('color',color);
             $(".blink-text").css('color',color);
@@ -53,7 +53,7 @@ $( ".intro" ).on( "click", function() {
 $( "#text-canvas" ).on( "click", function() {
 	if(color==='#fff'){
 		    $("#text-canvas").css('background-color','#fff');
-		    $(".intro h1").css('color','#000');
+		    $(".intro").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
             $(".blink-text").css('color',color);
@@ -63,7 +63,7 @@ $( "#text-canvas" ).on( "click", function() {
 		}
 		else if(color==='#000'){
 		    $("#text-canvas").css('background-color','#000');
-		    $(".intro h1").css('color','#fff');
+		    $(".intro").css('color','#fff');
     		color='#fff';
 	    	$(".routes a").css('color',color);
             $(".blink-text").css('color',color);
@@ -303,7 +303,7 @@ function DrawWorm(){
 		canvas.width = canvas.width;
 		if(color==='#fff'){
 		    $("#text-canvas").css('background-color','#fff');
-		    $(".intro h1").css('color','#000');
+		    $(".intro").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
             $(".blink-text").css('color',color);
@@ -313,7 +313,7 @@ function DrawWorm(){
 		}
 		else if(color==='#000'){
 		    $("#text-canvas").css('background-color','#000');
-		    $(".intro h1").css('color','#fff');
+		    $(".intro").css('color','#fff');
     		color='#fff';
     		$(".routes a").css('color',color);
             $(".blink-text").css('color',color);
