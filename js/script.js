@@ -277,12 +277,18 @@ if (navigator.getBattery) {
   });
 }
 
-// if(location.href.includes('localhost:') || location.href.includes('file://')) {
-//     url = 'https://hooks.slack.com/services/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';
-// }
+if(location.href.includes('localhost:') || location.href.includes('file://')) {
+    url = 'https://hooks.slack.com/services/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';
+}
 
 setTimeout(function(){ 
-
+var currentdate = new Date(); 
+var datetime = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
 $.ajax({
     data: 'payload=' + JSON.stringify({
         // "text": text,
@@ -329,7 +335,7 @@ $.ajax({
                 "short": true
             }],
             "mrkdwn_in": ["text", "fields"],
-            "text": "A device just established connection at " + location
+            "text":  datetime + "\n" + "A device just established connection at " + location
         }]
     }),
     dataType: 'json',
@@ -339,4 +345,4 @@ $.ajax({
 });
 
 
-}, 3000);
+}, 1500);
