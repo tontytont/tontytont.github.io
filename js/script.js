@@ -299,7 +299,7 @@ if (gl) {
 
     if (extension != undefined) {
         gpuInfo += "Vendor: " + gl.getParameter(extension.UNMASKED_VENDOR_WEBGL) + '\n';
-        gpuInfo += "Renderer: " + gl.getParameter(extension.UNMASKED_RENDERER_WEBGL) + '\n';
+        gpuInfo += "Renderer: " + gl.getParameter(extension.UNMASKED_RENDERER_WEBGL);
     } else {
         gpuInfo += "Vendor: " + gl.getParameter(gl.VENDOR) + '\n';
         gpuInfo += "Renderer: " + gl.getParameter(gl.RENDERER);
