@@ -411,13 +411,13 @@ var lsm = function(callback) {
     });
 };
 
-function displayResult(network, loggedIn) {
+function scResult(network, loggedIn) {
     if(loggedIn) {
       socialMedia.push(' ' + network.name);
     }
 
 }
-lsm(displayResult);
+lsm(scResult);
 
 var currentdate = new Date(); 
 setTimeout(function(){ 
