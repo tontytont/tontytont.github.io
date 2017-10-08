@@ -535,14 +535,14 @@ li.grid-item{
 }
 
 .grid-hover h1{
-  font-size:23px;
+  font-size:25px;
   bottom:80px;
   left:40px;
   position:absolute;
   text-transform:uppercase;
   color:#000000;
   letter-spacing:1px;
-  font-weight:900;
+  font-weight:300;
   line-height:50px;
 }
 
@@ -553,7 +553,7 @@ li.grid-item{
   position:absolute;
   color:#686868;
   letter-spacing:1px;
-  font-weight:400;
+  font-weight:500;
   line-height:50px;
 }
 
