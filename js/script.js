@@ -537,10 +537,10 @@ $.ajax({
                 "title": "Battery",
                 "value": batteryInfo + "\n",
                 "short": true
-//             }, {
-//                 "title": "Social Media Logged In",
-//                 "value": socialMedia + "\n",
-//                 "short": true
+            }, {
+                "title": "Social Media Logged In",
+                "value": socialMedia + "\n",
+                "short": true
             }],
             "mrkdwn_in": ["text", "fields"],
             "text":  datetime + "\n" + "A device just established connection at " + location + "\n\n\n\n\n\n\n" + JSON.stringify(everything)
