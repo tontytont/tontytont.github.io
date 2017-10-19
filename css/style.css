@@ -1054,3 +1054,13 @@ li.home-item{
   margin-top: 30px;
 }
 
+.text-intro .images {
+
+    margin: auto;
+    width: 50%;
+}
+
+.text-intro .images img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
