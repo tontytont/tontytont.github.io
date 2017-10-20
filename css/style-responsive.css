@@ -53,7 +53,6 @@
 
 @media all and (max-width: 1179px) and (min-width: 1024px) {
 
-
   header.boxed .header-margin{
     width:800px;
   }
@@ -105,7 +104,6 @@
 
 
 @media all and (max-width: 1023px) and (min-width: 769px) {
-
 
   header.boxed .header-margin{
     width:600px;
@@ -174,6 +172,13 @@
 @media all and (max-width: 768px) and (min-width: 481px) {
 
 
+
+
+  .text-intro .images {
+    width: 100%;
+    margin-left: 0%;
+  }
+  
   header.boxed .header-margin{
     width:400px;
   }
@@ -269,6 +274,13 @@
 @media all and (max-width: 480px) and (min-width: 320px) {
 
 
+
+
+  .text-intro .images {
+    width: 100%;
+    margin-left: 0%;
+  }
+  
   header.boxed .header-margin{
     width:280px;
   }
