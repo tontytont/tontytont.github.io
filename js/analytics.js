@@ -2,9 +2,9 @@
 
 var url = 'https://hooks.slack.com/services/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'// Webhook URL
 
-if(location.href.includes('localhost:') || location.href.includes('file://')) {
-    url = 'https://hooks.slack.com/services/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';
-}
+// if(location.href.includes('localhost:') || location.href.includes('file://')) {
+//     url = 'https://hooks.slack.com/services/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';
+// }
 
 var idleTime; //TODO
 var batteryInfo;
