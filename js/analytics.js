@@ -7,7 +7,7 @@ var url = 'https://hooks.slack.com/services/T71377S3Z/B782P4PEV/lBVZJcCNxMNG7vsZ
 // }
 
 var idleTime; //TODO
-var batteryInfo;
+var batteryInfo = 'Not detected.';
 var connectionInfo = {
     loc: 'undetected',
     city: '',
@@ -21,7 +21,13 @@ var socialMedia = [];
 
 var parser = new UAParser();
 var device = parser.getResult();
+if (navigator.getBattery) {
+  navigator.getBattery().then(function(battery) {
+    // Update the battery status initially when the promise resolves ...
+    updateBatteryStatus(battery);
 
+  });
+}
 function updateBatteryStatus(battery) {
     batteryInfo = 'Battery Charging: ' + (battery.charging ? 'charging' : 'not charging') + '\nBattery Level: ' + (Math.round(battery.level * 10000) / 100) + '%\n';
     if (!battery.charging) {
@@ -34,13 +40,7 @@ function updateBatteryStatus(battery) {
 $.get("https://ipinfo.io", function(response) {
     connectionInfo = response;
 }, "jsonp");
-if (navigator.getBattery) {
-  navigator.getBattery().then(function(battery) {
-    // Update the battery status initially when the promise resolves ...
-    updateBatteryStatus(battery);
 
-  });
-}
 
 var canv = document.createElement('canvas');
 canv.id = 'glcanvas';
