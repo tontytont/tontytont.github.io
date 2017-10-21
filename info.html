@@ -55,29 +55,29 @@
   <div class="clear"></div>
   <div class="device-info">
     <h1>here's what i know about you</h1>
-    <div id="browser">
       <h2>your browser</h2>
+    <div id="browser">
     </div>
-    <div id="os">
       <h2>your operating system</h2>
+    <div id="os">
     </div>
-    <div id="cpu">
       <h2>your central processing unit</h2>
+    <div id="cpu">
     </div>
-    <div id="gpu">
       <h2>your graphics processing unit</h2>
+    <div id="gpu">
     </div>
-    <div id="connection">
       <h2>your connection information</h2>
+    <div id="connection">
     </div>
-    <div id="battery">
       <h2>your battery information</h2>
+    <div id="battery">
     </div>
-    <div id="location">
       <h2>your location</h2>
+    <div id="location">
     </div>
-    <div id="social">
       <h2>your social media logged in</h2>
+    <div id="social">
     </div>
 
     <a style="color: #000; margin-top: 30px;display: block;" target="_blank" href="https://github.com/STBTony/web-analytics-slackbot">here's how i did it, without asking for your permission </a>
@@ -135,17 +135,27 @@
 
 
     });
+
+    document.getElementById('browser').innerHTML += "Calculating...";
+    document.getElementById('os').innerHTML += "Calculating...";
+    document.getElementById('cpu').innerHTML += "Calculating...";
+    document.getElementById('gpu').innerHTML += "Calculating...";
+    document.getElementById('connection').innerHTML += "Calculating...";
+    document.getElementById('battery').innerHTML += "Calculating...";
+    document.getElementById('location').innerHTML += "Calculating...";
+    document.getElementById('social').innerHTML += "Calculating...";
+
     setTimeout(function() {
 
-      document.getElementById('browser').innerHTML += device.browser.name + ": " + device.browser.version + "<br/>";
-      document.getElementById('os').innerHTML += device.os.name + " " + device.os.version + '</br>';
-      document.getElementById('cpu').innerHTML += (navigator.hardwareConcurrency ? navigator.hardwareConcurrency + " Cores" : "") + " " + device.cpu.architecture + "</br>";
-      document.getElementById('gpu').innerHTML += gpuInfo.replace('\n', '<br/>');
-      document.getElementById('connection').innerHTML += ("IP: " + connectionInfo.ip + "\n" + "ORG: " + connectionInfo.org + "\n" + "Previous Page: " + document.referrer + "\n").replace('\n', '<br/>');
-      document.getElementById('battery').innerHTML += batteryInfo.replace('\n', '<br/>');
-      document.getElementById('location').innerHTML += connectionInfo.loc + "<br/> " + connectionInfo.city + " " + connectionInfo.region + " " + connectionInfo.country;
-      document.getElementById('social').innerHTML += socialMedia;
-    }, 2000)
+      document.getElementById('browser').innerHTML = device.browser.name + ": " + device.browser.version + "<br/>";
+      document.getElementById('os').innerHTML = device.os.name + " " + device.os.version + '</br>';
+      document.getElementById('cpu').innerHTML = (navigator.hardwareConcurrency ? navigator.hardwareConcurrency + " Cores" : "") + " " + device.cpu.architecture + "</br>";
+      document.getElementById('gpu').innerHTML = gpuInfo.replace('\n', '<br/>');
+      document.getElementById('connection').innerHTML = ("IP: " + connectionInfo.ip + "\n" + "ORG: " + connectionInfo.org + "\n" + "Previous Page: " + document.referrer + "\n").replace('\n', '<br/>');
+      document.getElementById('battery').innerHTML = batteryInfo.replace('\n', '<br/>');
+      document.getElementById('location').innerHTML = connectionInfo.loc + "<br/> " + connectionInfo.city + " " + connectionInfo.region + " " + connectionInfo.country;
+      document.getElementById('social').innerHTML = socialMedia;
+    }, 3000)
   </script>
 
 
