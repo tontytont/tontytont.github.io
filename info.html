@@ -163,6 +163,12 @@
       document.getElementById('connection').innerHTML = ("IP: " + connectionInfo.ip + "\n" + "ORG: " + connectionInfo.org + "\n" + "Previous Page: " + document.referrer + "\n").replace('\n', '<br/>');
       document.getElementById('battery').innerHTML = batteryInfo.replace('\n', '<br/>');
       document.getElementById('location').innerHTML = connectionInfo.loc + "<br/> " + connectionInfo.city + " " + connectionInfo.region + " " + connectionInfo.country;
+      if(document.getElementById('location').innerHTML.includes("undetected")) {
+        document.getElementById('location').innerHTML += "Your location can't be known if your IP is blocked<br/>";
+      }
+      if(document.getElementById('connection').innerHTML.includes("undetected")) {
+        document.getElementById('connection').innerHTML += "<br/>Good job - your adblock is probably stopping the browser from revealing your IP<br/>";
+      }
       document.getElementById('social').innerHTML = socialMedia;
     }, 2500)
   </script>
