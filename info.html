@@ -125,7 +125,16 @@
   <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>  
   <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>    
   <script src="js/jquery.jkit.1.2.16.min.js"></script>
-  <script src="js/analytics.js" type="text/javascript"></script>
+  <script src="js/tont.js" type="text/javascript"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108427906-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-108427906-1');
+  </script>
   <script src="js/script.js" type="text/javascript"></script>
   <script src="lib/plyr.js"></script>
   <script>plyr.setup();</script>
@@ -155,7 +164,7 @@
       document.getElementById('battery').innerHTML = batteryInfo.replace('\n', '<br/>');
       document.getElementById('location').innerHTML = connectionInfo.loc + "<br/> " + connectionInfo.city + " " + connectionInfo.region + " " + connectionInfo.country;
       document.getElementById('social').innerHTML = socialMedia;
-    }, 3000)
+    }, 2500)
   </script>
 
 
