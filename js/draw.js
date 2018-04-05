@@ -16,19 +16,19 @@ var layers = {
 };
 
 if(color==='#fff'){
-    $("#text-canvas").css('background-color','#000');
+    $("#background-overlay").css('background-color','#000');
     $(".intro").css('color', color);
     $(".routes a").css('color',color);;
     $(".blink-text").css('color',color);
 } else {
-	$("#text-canvas").css('background-color','#fff');
+	$("#background-overlay").css('background-color','#fff');
 	$(".intro").css('color',color);
     $(".routes a").css('color',color);
 }
 
 $( ".intro" ).on( "click", function() {
 	if(color==='#fff'){
-		    $("#text-canvas").css('background-color','#fff');
+		    $("#background-overlay").css('background-color','#fff');
 		    $(".intro").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
@@ -39,7 +39,7 @@ $( ".intro" ).on( "click", function() {
 		}
 		else if(color==='#000'){
 
-		    $("#text-canvas").css('background-color','#000');
+		    $("#background-overlay").css('background-color','#000');
 		    $(".intro").css('color','#fff');
     		color='#fff';
 			$(".routes a").css('color',color);
@@ -52,7 +52,7 @@ $( ".intro" ).on( "click", function() {
 
 $( "#text-canvas" ).on( "click", function() {
 	if(color==='#fff'){
-		    $("#text-canvas").css('background-color','#fff');
+		    $("#background-overlay").css('background-color','#fff');
 		    $(".intro").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
@@ -62,7 +62,7 @@ $( "#text-canvas" ).on( "click", function() {
 			update();
 		}
 		else if(color==='#000'){
-		    $("#text-canvas").css('background-color','#000');
+		    $("#background-overlay").css('background-color','#000');
 		    $(".intro").css('color','#fff');
     		color='#fff';
 	    	$(".routes a").css('color',color);
@@ -302,7 +302,7 @@ function DrawWorm(){
 		e.preventDefault();
 		canvas.width = canvas.width;
 		if(color==='#fff'){
-		    $("#text-canvas").css('background-color','#fff');
+		    $("#background-overlay").css('background-color','#fff');
 		    $(".intro").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
@@ -312,7 +312,7 @@ function DrawWorm(){
 			update();
 		}
 		else if(color==='#000'){
-		    $("#text-canvas").css('background-color','#000');
+		    $("#background-overlay").css('background-color','#000');
 		    $(".intro").css('color','#fff');
     		color='#fff';
     		$(".routes a").css('color',color);

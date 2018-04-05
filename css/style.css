@@ -909,20 +909,20 @@ li.home-item{
 .container{
   padding-top:80px;
 }
-.intro{
+.intro {
   z-index: 11;
   height:10vh;
   background: transparent;
   position: fixed;
-  top: 40vh;
+  top: 39vh;
   width: 100%;
   text-align: center;
   /*transition: background-color 0.2s/ ease;*/
-  /*transition: color 0.3s ease;*/
+  transition: color 0.3s ease;
 }
 .intro h1 {
   text-align: center;
-  font-size: 12vh;
+  font-size: 13vh;
   font-weight: 100;
   background: transparent;
 }
@@ -991,6 +991,7 @@ li.home-item{
   text-decoration: none;
   color: #000;
   font-size: 15px;
+  font-weight: 600;
 }
 /*.index-container {
   overflow-y: hidden;
@@ -1065,3 +1066,23 @@ li.home-item{
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+#myVideo {
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /*z-index: -1;*/
+  opacity: 1;
+}
+
+#background-overlay {
+  -webkit-transition: background 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in;
+  -o-transition: background 0.2s ease-in;
+  transition: background 0.2s ease-in; 
+}
+
