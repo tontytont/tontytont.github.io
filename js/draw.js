@@ -1,5 +1,6 @@
 var colors = ['#000','#fff'];
-var tmp = parseInt(Math.floor((Math.random()*2)));
+// var tmp = parseInt(Math.floor((Math.random()*2)));
+var tmp = 1;
 var color = colors[tmp];
 
 
@@ -7,7 +8,7 @@ var color = colors[tmp];
 var characterList = ['0', '1', '壹', '零', '1', '0', '0', '1', '1', '0', '0', '1', '1', '0', '0', '1', '1', '0', '0', '1'];
 var textColors = [color, color, color, color, color];
 var layers = {
-    n: 7, //number of layers
+    n: 0, //number of layers
     letters: [128, 64, 32, 16, 8, 4, 2], //letters per layer (starting from the deepest layer)
     coef: [0.05, 0.08, 0.1, 0.2, 0.3, 0.4, 0.5], //how much the letters move from the mouse (starting from the deepest layer)
     size: [4, 6, 8, 12, 16, 20, 24], //font size of the letters (starting from the deepest layer)
@@ -16,19 +17,19 @@ var layers = {
 };
 
 if(color==='#fff'){
-    $("#text-canvas").css('background-color','#000');
+    $("#background-overlay").css('background-color','#000');
     $(".intro").css('color', color);
     $(".routes a").css('color',color);;
     $(".blink-text").css('color',color);
 } else {
-	$("#text-canvas").css('background-color','#fff');
+	$("#background-overlay").css('background-color','#fff');
 	$(".intro").css('color',color);
     $(".routes a").css('color',color);
 }
 
 $( ".intro" ).on( "click", function() {
 	if(color==='#fff'){
-		    $("#text-canvas").css('background-color','#fff');
+		    $("#background-overlay").css('background-color','#fff');
 		    $(".intro").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
@@ -39,7 +40,7 @@ $( ".intro" ).on( "click", function() {
 		}
 		else if(color==='#000'){
 
-		    $("#text-canvas").css('background-color','#000');
+		    $("#background-overlay").css('background-color','#000');
 		    $(".intro").css('color','#fff');
     		color='#fff';
 			$(".routes a").css('color',color);
@@ -48,11 +49,12 @@ $( ".intro" ).on( "click", function() {
     		createLetters();
     		update();
 		}
+	clear();
 });
 
 $( "#text-canvas" ).on( "click", function() {
 	if(color==='#fff'){
-		    $("#text-canvas").css('background-color','#fff');
+		    $("#background-overlay").css('background-color','#fff');
 		    $(".intro").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
@@ -62,7 +64,7 @@ $( "#text-canvas" ).on( "click", function() {
 			update();
 		}
 		else if(color==='#000'){
-		    $("#text-canvas").css('background-color','#000');
+		    $("#background-overlay").css('background-color','#000');
 		    $(".intro").css('color','#fff');
     		color='#fff';
 	    	$(".routes a").css('color',color);
@@ -71,6 +73,7 @@ $( "#text-canvas" ).on( "click", function() {
 			createLetters();
 			update();
 		}
+	clear();
 });
 
 
@@ -302,7 +305,7 @@ function DrawWorm(){
 		e.preventDefault();
 		canvas.width = canvas.width;
 		if(color==='#fff'){
-		    $("#text-canvas").css('background-color','#fff');
+		    $("#background-overlay").css('background-color','#fff');
 		    $(".intro").css('color','#000');
     		color='#000';
     		$(".routes a").css('color',color);
@@ -312,7 +315,7 @@ function DrawWorm(){
 			update();
 		}
 		else if(color==='#000'){
-		    $("#text-canvas").css('background-color','#000');
+		    $("#background-overlay").css('background-color','#000');
 		    $(".intro").css('color','#fff');
     		color='#fff';
     		$(".routes a").css('color',color);
