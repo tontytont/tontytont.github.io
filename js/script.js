@@ -61,8 +61,8 @@ function Website() {
 		$('body').jKit();
 		backgroundmenu();
 		setTimeout(function(){
-			$(".preloader").fadeOut(300);							
-		},500);
+			$(".preloader").fadeOut(1000);							
+		},800);
 		setTimeout(function(){
 			$('header').fadeIn();							
 		},500);

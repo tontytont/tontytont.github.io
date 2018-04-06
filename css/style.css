@@ -930,16 +930,18 @@ li.home-item{
 .blink-text {
   animation: blinker 3s ease-in-out infinite;
   position: fixed;
-  top: 47%;
+  top: 47vh;
   z-index: 10;
   left: 0;
   right: 0;
+
 }
 
 .blink-text p {
-  font-size: 16px;
-  padding-left: 20px;
-  padding-right: 20px;
+  font-size: 3vh;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 900;
 }
 .blink-text #left {
   display: inline;
@@ -974,6 +976,11 @@ li.home-item{
 #info:hover {
   border-bottom: 0.5px solid;
 }
+
+#link:hover {
+  border-bottom: 0.5px solid;
+}
+
 .routes {
   position: fixed;
   top: 75%;
@@ -991,7 +998,7 @@ li.home-item{
   text-decoration: none;
   color: #000;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 900;
 }
 /*.index-container {
   overflow-y: hidden;
@@ -1071,11 +1078,11 @@ li.home-item{
   left: 50%;
   min-height: 100%;
   min-width: 100%;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
-  /*z-index: -1;*/
-  opacity: 1;
+  z-index: -1;
+  opacity: 0.5;
 }
 
 #background-overlay {
