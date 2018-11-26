@@ -1098,15 +1098,21 @@ li.home-item{
 }
 
 #yt-player-container {
-  text-align: center;
+  /*text-align: center;*/
   max-width: 100%;
   margin: auto;
   width: 100%;
-  position: relative;
+  /*position: relative;*/
   padding-bottom: 56.25%;
   height: 0;
   /*top: 30vh;*/
   overflow: hidden;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 #yt-player-container h1 {
